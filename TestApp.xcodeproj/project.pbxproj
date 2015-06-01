@@ -16,6 +16,7 @@
 		C1F048341B1C753700438144 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F048331B1C753700438144 /* Images.xcassets */; };
 		C1F048371B1C753700438144 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F048351B1C753700438144 /* LaunchScreen.xib */; };
 		C1F048431B1C753700438144 /* TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F048421B1C753700438144 /* TestAppTests.m */; };
+		C1F0484D1B1C762000438144 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F0484C1B1C762000438144 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C1F0483C1B1C753700438144 /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F048411B1C753700438144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1F048421B1C753700438144 /* TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppTests.m; sourceTree = "<group>"; };
+		C1F0484C1B1C762000438144 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F0484D1B1C762000438144 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 		C1F048141B1C753600438144 = {
 			isa = PBXGroup;
 			children = (
+				C1F0484C1B1C762000438144 /* MapKit.framework */,
 				C1F0481F1B1C753700438144 /* TestApp */,
 				C1F0483F1B1C753700438144 /* TestAppTests */,
 				C1F0481E1B1C753700438144 /* Products */,
@@ -178,6 +182,11 @@
 				TargetAttributes = {
 					C1F0481C1B1C753700438144 = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C1F0483B1B1C753700438144 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -362,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -372,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
